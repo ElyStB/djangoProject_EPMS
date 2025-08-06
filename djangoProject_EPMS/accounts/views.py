@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.urls import reverse, reverse_lazy
 
 from djangoProject_EPMS.accounts.forms import RegisterUserCreationForm
+from djangoProject_EPMS.accounts.models import Profile
 
 
 class LoginUserView(auth_views.LoginView):
