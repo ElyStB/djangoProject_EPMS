@@ -5,6 +5,32 @@
     <title>Profile Details</title>
 </head>
 <body>
+    <h1>Profile Details</h1>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>First Name: {{ user.first_name }}</p>
+    <p>Last Name: {{ user.last_name }}</p>
+
+    <h2>Change Password</h2>
+    <form action="{% url 'change_password' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Change Password</button>
+    </form>
+
+    <h2>Edit Profile</h2>
+    <form action="{% url 'profile_edit' %}" method="post">
+        {% csrf_token %}
+        {{ edit_form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <p><a href="{% url 'home' %}">Back to Home</a></p>
+
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
 
 </body>
 </html>

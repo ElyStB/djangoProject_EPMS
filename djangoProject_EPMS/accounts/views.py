@@ -47,10 +47,11 @@ class UserProfileEditView(views.UpdateView):
         return reverse('edit_profile', kwargs={'pk': self.object.pk})
 
 
-class  DeleteUserProfileView(views.DeleteView):
+class DeleteUserProfileView(views.DeleteView):
     queryset = Profile.objects.all()
     template_name = 'accounts/profile-delete.html'
 
     def get_success_url(self):
         messages.success(self.request, "Profile deleted successfully.")
-        return reverse('home')  # Redirect to home or another page after deletionqueryset
+        return reverse('home')  # Redirect to home or another page after deletion query set
+

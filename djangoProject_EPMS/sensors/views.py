@@ -1,3 +1,19 @@
 from django.shortcuts import render
 
-# Create your views here.
+from django.views import generic as views
+
+
+class SensorRegisterView:
+    pass
+
+
+class SensorDetailView:
+    pass
+
+
+class SensorEditView:
+    pass
+
+
+class SensorDeleteView:
+    pass
