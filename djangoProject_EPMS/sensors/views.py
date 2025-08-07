@@ -3,17 +3,17 @@ from django.shortcuts import render
 from django.views import generic as views
 
 
-class SensorRegisterView:
+class SensorRegisterView(views.CreateView):
     pass
 
 
-class SensorDetailView:
+class SensorDetailView(views.DetailView):
     pass
 
 
-class SensorEditView:
+class SensorEditView(views.UpdateView):
     pass
 
 
-class SensorDeleteView:
+class SensorDeleteView(views.DeleteView):
     pass

@@ -68,13 +68,12 @@ class UsedSensorsModel(models.Model):
 
     user = models.ForeignKey(
         UserModel,
-        on_delete=models.DO_NOTHING,
+        on_delete=models.CASCADE,
         related_name='used_sensors',
     )
 
     sensor = models.ManyToManyField(
         SensorModel,
-        on_delete=models.CASCADE,
         related_name='used_sensors',
     )
 
