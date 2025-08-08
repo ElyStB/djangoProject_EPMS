@@ -5,6 +5,10 @@
     <title>Sensor Details</title>
 </head>
 <body>
-
+    <h1>Sensor Details</h1>
+   <form action="{% url 'details sensor' %}" method="post">
+       {{ form.as_p }}
+   </form>
+    <a href="{% url 'sensor_list' %}">Back to Sensor List</a>
 </body>
 </html>

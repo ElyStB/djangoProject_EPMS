@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'djangoProject_EPMS.accounts',
+    'djangoProject_EPMS.accounts.apps.AppConfig'
     'djangoProject_EPMS.common',
     'djangoProject_EPMS.core',
     'djangoProject_EPMS.sensors',

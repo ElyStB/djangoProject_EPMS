@@ -12,7 +12,6 @@ class SensorModel(models.Model):
     MIN_VALUE_VALIDATOR_LONGITUDE = -180.0
     MAX_VALUE_VALIDATOR_LONGITUDE = 180.0
     MAX_TYPE_LENGTH = 25
-    MAX_SERIAL_NUMBER_LENGTH = 10
     MAX_DESCRIPTION_LENGTH = 300
 
     location_latitude = models.FloatField(
@@ -40,7 +39,6 @@ class SensorModel(models.Model):
     )
 
     serial_number = models.IntegerField(
-        max_length=MAX_SERIAL_NUMBER_LENGTH,
         null=False,
         blank=False,
     )
